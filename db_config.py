@@ -6,7 +6,7 @@ def get_engine():
     """
     # --- Connection settings ---
     username = "postgres"         # Change if you use a different PostgreSQL user
-    password = "your-password"    # replace with your real password
+    password = "Z4mb0Es27An13Vi04"    # replace with your real password
     host = "localhost"            # or your server's hostname/IP
     port = "5432"                 # default PostgreSQL port
     database = "olist_dw_db"      # your database name

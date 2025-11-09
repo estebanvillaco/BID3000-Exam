@@ -92,8 +92,11 @@ CREATE TABLE fact_order_items (
     FOREIGN KEY (order_id) REFERENCES dim_order(order_id),
     FOREIGN KEY (product_id) REFERENCES dim_product(product_id),
     FOREIGN KEY (seller_id) REFERENCES dim_seller(seller_id),
-    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id),
+    -- Add this line for your ETL ON CONFLICT to work
+    UNIQUE (order_id, product_id, seller_id)
 );
+
 
 -- 2. Fact Order Delivery
 CREATE TABLE fact_order_delivery (
@@ -108,7 +111,9 @@ CREATE TABLE fact_order_delivery (
     order_actual_delivery_days INT,
     delivery_delay_days INT,
     FOREIGN KEY (order_id) REFERENCES dim_order(order_id),
-    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id),
+    -- Add this UNIQUE constraint so ON CONFLICT(order_id) works
+    UNIQUE (order_id)
 );
 
 -- ============================================================
