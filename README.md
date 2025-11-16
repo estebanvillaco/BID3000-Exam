@@ -129,7 +129,7 @@ python ETL.py
 
 ETL.py does the following:
 
-Reads data from Datasets/
+Reads data from Datasets/ (inside this project make you own dataset folder and extract the dataset files to your new folder.)
 
 Cleans and transforms data (handles nulls, duplicates, etc.)
 
