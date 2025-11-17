@@ -11,7 +11,9 @@ BID3000_Exam/
 │
 ├── Database/ # SQL and ERD for the data warehouse
 │   ├── schema_creation.sql
-│   └── ERD.pdf
+│   
+├── Documentation
+│   ├── ERD.png
 │
 ├── db_config.py              # Database connection setup (SQLAlchemy engine)
 │
