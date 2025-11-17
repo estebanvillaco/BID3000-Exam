@@ -183,7 +183,7 @@ BID3000 – USN course material
 Student Candidates
 Group work from University of South-Eastern Norway (USN)  Autumn 2025
 
-Campus Ringerike
+Campus Ringerike:
 Esteban Villacorta, Adrian Lafjell ED, Jonas Ambaya
 
 2025, BID3000 Home Exam, University of South-Eastern Norway
