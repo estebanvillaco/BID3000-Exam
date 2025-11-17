@@ -1,4 +1,4 @@
--- Querry 1: Time based analysis
+-- Query 1: Time based analysis
 SELECT d.year,
     SUM(f.price) AS toatal_sales
 FROM fact_order_items f
@@ -7,14 +7,14 @@ GROUP BY d.year
 ORDER BY d.year;
 
 
--- Querry 2: Aggregation analysis
+-- Query 2: Aggregation analysis
 SELECT d.year, d.month, SUM(f.payment_value) AS total_sales
 FROM fact_order_items f
 JOIN dim_date d ON f.date_key = d.date_key
 GROUP BY ROLLUP (d.year, d.month);
 
 
--- Querry 3: Window Function
+-- Query 3: Window Function
 SELECT 
     d.year,
     p.product_category_name,
@@ -27,7 +27,7 @@ GROUP BY d.year, p.product_category_name
 ORDER BY d.year, rank_per_year;
 
 
--- Querry 4: Complex filtering  Subqueries or EXISTS/IN clauses
+-- Query 4: Complex filtering  Subqueries or EXISTS/IN clauses
 SELECT c.customer_id, c.customer_city
 FROM fact_order_items f
 JOIN dim_date d ON d.date_key = f.date_key
@@ -40,7 +40,7 @@ AND c.customer_id NOT IN (
     WHERE d2.year = 2016
 );
 
--- Querry 5: Business Metrics (KPI calculations specific to your domain)
+-- Query 5: Business Metrics (KPI calculations specific to your domain)
 SELECT d.year,
     ROUND(AVG(f.order_actual_delivery_days), 2) AS avg_delivery_days
 FROM fact_order_delivery f
@@ -50,7 +50,7 @@ GROUP BY d.year
 ORDER BY d.year;
 
 
--- Querry 6: Business Metrics (Customer or product performance analysis)
+-- Query 6: Business Metrics (Customer or product performance analysis)
 SELECT p.product_id,
     SUM(f.price) AS most_sold_product
 FROM fact_order_items f
