@@ -9,7 +9,7 @@ BID3000_Exam/
 │
 ├── Datasets/                 # Raw data (CSV files)
 │
-├── Star_Schema_Architecture/ # SQL and ERD for the data warehouse
+├── Database/ # SQL and ERD for the data warehouse
 │   ├── schema_creation.sql
 │   └── ERD.pdf
 │
