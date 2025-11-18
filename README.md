@@ -119,7 +119,7 @@ def get_engine():
     return engine
 ```
 
-Important: Change the password to your actual PostgreSQL password and ensure the database olist_dw_db exists before running the ETL script.
+Important: Change the password to your actual PostgreSQL password and ensure the database olist_dw_db exists before running the ETL script. The same goes to the analytics folder where there is a predictive and discriptive scripts.
 
 
 7. Run the ETL process
